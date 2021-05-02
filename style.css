@@ -176,6 +176,9 @@ canvas {
     sepia(var(--sepia, 0%)) saturate(var(--saturate, 100%))
     hue-rotate(var(--hue, 0deg));
 }
+.hide {
+  display: none;
+}
 img {
   height: 100%;
   width: 100%;

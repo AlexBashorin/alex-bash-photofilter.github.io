@@ -58,6 +58,7 @@ btnSave.addEventListener("click", function(e) {
     const ctx = canvas.getContext("2d");
     ctx.filter = `blur(${blur * blurCorr}px) invert(${invert}) sepia(${sepia}) saturate(${saturate}) hue-rotate(${hue})`;
     ctx.drawImage(img, 0, 0);
+    canvas.classList.add('hide');
     let link = document.createElement('a');
     link.setAttribute('download', 'myImg.png');
     link.href = image.src;
@@ -119,7 +120,7 @@ function drawImage(src) {
     canvas.width = img.width;
     canvas.height = img.height;
 
-    ctx.drawImage(img, 0, 0);
+    // ctx.drawImage(img, 0, 0);
     image.src = src;
   }
 }
